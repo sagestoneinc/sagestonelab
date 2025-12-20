@@ -1,2 +1,18 @@
-@import "tailwindcss";
-@import "./globals.css";
+@import "./globals.css" layer(components);
+
+@theme {
+  --color-sage-50: #f7f9f7;
+  --color-sage-100: #e8ede8;
+  --color-sage-200: #d4ddd4;
+  --color-sage-300: #b5c4b5;
+  --color-sage-400: #8fa68f;
+  --color-sage-500: #6b886b;
+  --color-sage-600: #547054;
+  --color-sage-700: #435843;
+  --color-sage-800: #374738;
+  --color-sage-900: #2e3b2e;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
