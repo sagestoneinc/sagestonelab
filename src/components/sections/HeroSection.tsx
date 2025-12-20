@@ -36,10 +36,10 @@ export function HeroSection() {
 
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <CTAButton variant="primary" showArrow>
+                <CTAButton variant="primary" showArrow href="/pricing">
                   Start Free Trial – 14 Days
                 </CTAButton>
-                <CTAButton variant="secondary">
+                <CTAButton variant="secondary" href="/product">
                   See How It Works
                 </CTAButton>
               </div>

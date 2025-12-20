@@ -1,17 +1,14 @@
 import React from 'react';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-import { HeroSection } from './components/sections/HeroSection';
-import { ProblemSection } from './components/sections/ProblemSection';
-import { SolutionSection } from './components/sections/SolutionSection';
-import { FeaturesSection } from './components/sections/FeaturesSection';
-import { IntegrationsSection } from './components/sections/IntegrationsSection';
-import { HowItWorksSection } from './components/sections/HowItWorksSection';
-import { UseCasesSection } from './components/sections/UseCasesSection';
-import { ProductSection } from './components/sections/ProductSection';
-import { AboutSection } from './components/sections/AboutSection';
-import { ContactSection } from './components/sections/ContactSection';
-import { FinalCTASection } from './components/sections/FinalCTASection';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Product from './pages/Product';
+import Features from './pages/Features';
+import Pricing from './pages/Pricing';
+import Integrations from './pages/Integrations';
+import Resources from './pages/Resources';
+import SignIn from './pages/SignIn';
 
 export default function App() {
   return (
@@ -19,26 +16,15 @@ export default function App() {
       <Header />
       
       <main>
-        {/* Homepage Sections */}
-        <HeroSection />
-        <ProblemSection />
-        <SolutionSection />
-        <FeaturesSection />
-        <IntegrationsSection />
-        <HowItWorksSection />
-        <UseCasesSection />
-        
-        {/* Product Page Section */}
-        <ProductSection />
-        
-        {/* About Page Section */}
-        <AboutSection />
-        
-        {/* Contact/Demo Page Section */}
-        <ContactSection />
-        
-        {/* Final CTA */}
-        <FinalCTASection />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/integrations" element={<Integrations />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/signin" element={<SignIn />} />
+        </Routes>
       </main>
       
       <Footer />
